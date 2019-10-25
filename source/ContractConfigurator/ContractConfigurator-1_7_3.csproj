@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4082B9BC-243E-456D-A9C5-705F4428EB36}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ContractConfigurator</RootNamespace>
+    <AssemblyName>ContractConfigurator</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\KSPBackup\1_7_3\Kerbal Space Program\KSP_x64_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>D:\KSPBackup\1_7_3\Kerbal Space Program\KSP_x64_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:\KSPBackup\1_7_3\Kerbal Space Program\KSP_x64_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BehaviourFactory\AwardExperienceFactory.cs" />
+    <Compile Include="BehaviourFactory\ChangeKerbalTypeFactory.cs" />
+    <Compile Include="BehaviourFactory\RunCutSceneFactory.cs" />
+    <Compile Include="BehaviourFactory\ChangeVesselOwnershipFactory.cs" />
+    <Compile Include="BehaviourFactory\DestroyVesselFactory.cs" />
+    <Compile Include="BehaviourFactory\DialogBoxFactory.cs" />
+    <Compile Include="BehaviourFactory\CopyCraftFileFactory.cs" />
+    <Compile Include="BehaviourFactory\MessageFactory.cs" />
+    <Compile Include="BehaviourFactory\InvalidBehaviourFactory.cs" />
+    <Compile Include="BehaviourFactory\ExpressionFactory.cs" />
+    <Compile Include="BehaviourFactory\ExperimentalPartFactory.cs" />
+    <Compile Include="BehaviourFactory\OrbitGeneratorFactory.cs" />
+    <Compile Include="BehaviourFactory\RemoveKerbalFactory.cs" />
+    <Compile Include="BehaviourFactory\SpawnPassengersFactory.cs" />
+    <Compile Include="BehaviourFactory\SpawnVesselFactory.cs" />
+    <Compile Include="BehaviourFactory\UnlockPartFactory.cs" />
+    <Compile Include="BehaviourFactory\UnlockTechFactory.cs" />
+    <Compile Include="BehaviourFactory\WaypointGeneratorFactory.cs" />
+    <Compile Include="BehaviourFactory\SpawnKerbalFactory.cs" />
+    <Compile Include="Behaviour\ChangeKerbalType.cs" />
+    <Compile Include="Behaviour\PartTestHandler.cs" />
+    <Compile Include="Behaviour\AwardExperience.cs" />
+    <Compile Include="Behaviour\RunCutScene.cs" />
+    <Compile Include="Behaviour\DestroyVessel.cs" />
+    <Compile Include="Behaviour\RemoveKerbal.cs" />
+    <Compile Include="Behaviour\TriggeredBehaviour.cs" />
+    <Compile Include="Behaviour\ChangeVesselOwnership.cs" />
+    <Compile Include="Behaviour\DialogBox.cs" />
+    <Compile Include="Behaviour\CopyCraftFile.cs" />
+    <Compile Include="Behaviour\Message.cs" />
+    <Compile Include="Behaviour\ExperimentalPart.cs" />
+    <Compile Include="Behaviour\IHasKerbalBehaviour.cs" />
+    <Compile Include="Behaviour\SpawnPassengers.cs" />
+    <Compile Include="Behaviour\SpawnVessel.cs" />
+    <Compile Include="Behaviour\UnlockPart.cs" />
+    <Compile Include="Behaviour\UnlockTech.cs" />
+    <Compile Include="ExpressionParser\Parsers\Classes\ExperienceTraitParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Classes\LaunchSiteParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Classes\PQSCityParser.cs" />
+    <Compile Include="IKerbalNameStorage.cs" />
+    <Compile Include="ParameterFactory\HasAntennaFactory.cs" />
+    <Compile Include="Parameter\VesselParameter\HasAntenna.cs" />
+    <Compile Include="Requirement\ExpansionRequirement.cs" />
+    <Compile Include="SettingsBuilder.cs" />
+    <Compile Include="TrackingStationUI.cs" />
+    <Compile Include="ParameterFactory\NoStagingFactory.cs" />
+    <Compile Include="ParameterFactory\ResourceConsumptionFactory.cs" />
+    <Compile Include="Parameter\Duration.cs" />
+    <Compile Include="Parameter\HasAstronaut.cs" />
+    <Compile Include="Parameter\Not.cs" />
+    <Compile Include="Parameter\None.cs" />
+    <Compile Include="Parameter\AtMost.cs" />
+    <Compile Include="Parameter\AtLeast.cs" />
+    <Compile Include="Parameter\ContractConfiguratorParameter.cs" />
+    <Compile Include="Parameter\ParameterDelegate.cs" />
+    <Compile Include="Parameter\PerformOrbitalSurvey.cs" />
+    <Compile Include="Parameter\KerbalDeathsCustom.cs" />
+    <Compile Include="Parameter\RecoverKerbalCustom.cs" />
+    <Compile Include="Parameter\SCANsatCoverage.cs" />
+    <Compile Include="Parameter\TargetDestroyed.cs" />
+    <Compile Include="Parameter\ReachSpaceCustom.cs" />
+    <Compile Include="Parameter\MissionTimer.cs" />
+    <Compile Include="Parameter\VesselParameter\HasCrewCapacity.cs" />
+    <Compile Include="Parameter\VesselParameter\CollectScienceCustom.cs" />
+    <Compile Include="Parameter\VesselParameter\NoStaging.cs" />
+    <Compile Include="Parameter\VesselParameter\ResourceConsuption.cs" />
+    <Compile Include="Parameter\VesselParameter\Rendezvous.cs" />
+    <Compile Include="Parameter\VesselParameter\PlantFlagCustom.cs" />
+    <Compile Include="Parameter\VesselParameter\NewVessel.cs" />
+    <Compile Include="Parameter\VesselParameter\RecoverVessel.cs" />
+    <Compile Include="Parameter\VesselParameter\VesselIsType.cs" />
+    <Compile Include="Parameter\VesselParameter\VesselDestroyed.cs" />
+    <Compile Include="Parameter\VesselParameter\VesselNotDestroyed.cs" />
+    <Compile Include="Parameter\VesselParameter\Docking.cs" />
+    <Compile Include="Parameter\VesselParameter\OrbitParameter.cs" />
+    <Compile Include="Parameter\VesselParameter\PartValidation.cs" />
+    <Compile Include="Parameter\VesselParameter\HasPassengers.cs" />
+    <Compile Include="Parameter\VesselParameter\IsNotVessel.cs" />
+    <Compile Include="Parameter\VesselParameter\ReachState.cs" />
+    <Compile Include="Requirement\AtMostRequirement.cs" />
+    <Compile Include="Requirement\AtLeasRequirement.cs" />
+    <Compile Include="Requirement\ContractCheckRequirement.cs" />
+    <Compile Include="Requirement\AcceptContractRequirement.cs" />
+    <Compile Include="Requirement\InvalidContractRequirement.cs" />
+    <Compile Include="Requirement\PartModuleTypeUnlockedRequirement.cs" />
+    <Compile Include="Requirement\PerformOrbitalSurveyRequirement.cs" />
+    <Compile Include="Requirement\SCANsatCoverageRequirement.cs" />
+    <Compile Include="Requirement\SCANsatLocationCoverageRequirement.cs" />
+    <Compile Include="Requirement\ScienceRequirement.cs" />
+    <Compile Include="Requirement\ReputationRequirement.cs" />
+    <Compile Include="Requirement\FundsRequirement.cs" />
+    <Compile Include="ContractGroup.cs" />
+    <Compile Include="Requirement\CanResearchTechRequirement.cs" />
+    <Compile Include="CutScene\Action\MoveEVAKerbal.cs" />
+    <Compile Include="CutScene\Action\PositionActor.cs" />
+    <Compile Include="CutScene\Action\SetCamera.cs" />
+    <Compile Include="CutScene\Action\Delay.cs" />
+    <Compile Include="CutScene\Action\CutSceneAction.cs" />
+    <Compile Include="CutScene\Actor\KerbalActor.cs" />
+    <Compile Include="CutScene\Actor\Actor.cs" />
+    <Compile Include="CutScene\Camera\FixedCamera.cs" />
+    <Compile Include="CutScene\Camera\CutSceneCamera.cs" />
+    <Compile Include="CutScene\CutSceneConfigurator.cs" />
+    <Compile Include="CutScene\CutSceneDefinition.cs" />
+    <Compile Include="CutScene\CutSceneExecutor.cs" />
+    <Compile Include="CutScene\CutSceneItem.cs" />
+    <Compile Include="ExpressionParser\Parsers\Classes\TechParser.cs" />
+    <Compile Include="ExpressionParser\Wrappers\Tech.cs" />
+    <Compile Include="Other\VesselWaypoint.cs" />
+    <Compile Include="ParameterFactory\HasResourceCapacityFactory.cs" />
+    <Compile Include="ParameterFactory\NewVesselFactory.cs" />
+    <Compile Include="ParameterFactory\NotFactory.cs" />
+    <Compile Include="ParameterFactory\RecoverVesselFactory.cs" />
+    <Compile Include="ParameterFactory\SCANsatCoverageFactory.cs" />
+    <Compile Include="Requirement\VesselValidRequirement.cs" />
+    <Compile Include="ParameterFactory\MissionTimerFactory.cs" />
+    <Compile Include="ScenarioModules\ContractPreLoader.cs" />
+    <Compile Include="ExpressionParser\BaseParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Behaviours\BehaviourParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Behaviours\WaypointGeneratorParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Behaviours\SpawnKerbalParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Classes\LocationParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Classes\Science\ExperimentSituationParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Classes\Science\ExperimentParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Classes\Science\SubjectParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Classes\Science\BiomeParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Classes\OrbitParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Classes\PartParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Classes\ResourceParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Classes\VesselIdentifierParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Classes\WaypointParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\SimpleTypes\BooleanValueExpressionParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Classes\PrestigeParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\SimpleTypes\EnumExpressionParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Classes\KerbalParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Classes\DurationParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Classes\VesselParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\SimpleTypes\ListExpressionParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\Classes\CelestialBodyParser.cs" />
+    <Compile Include="ExpressionParser\DataNode.cs" />
+    <Compile Include="ExpressionParser\IExpressionParserRegistrer.cs" />
+    <Compile Include="ExpressionParser\Function.cs" />
+    <Compile Include="ExpressionParser\Method.cs" />
+    <Compile Include="ExpressionParser\Parsers\SimpleTypes\NumericValueExpressionParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\SimpleTypes\ClassExpressionParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\SimpleTypes\StringExpressionParser.cs" />
+    <Compile Include="ExpressionParser\Parsers\SimpleTypes\ValueExpressionParser.cs" />
+    <Compile Include="ExpressionParser\ExpressionParser.cs" />
+    <Compile Include="ExpressionParser\Wrappers\Biome.cs" />
+    <Compile Include="ExpressionParser\Wrappers\Location.cs" />
+    <Compile Include="ExpressionParser\Wrappers\VesselIdentifier.cs" />
+    <Compile Include="ExpressionParser\Wrappers\Resource.cs" />
+    <Compile Include="ExpressionParser\Wrappers\Kerbal.cs" />
+    <Compile Include="ExpressionParser\Wrappers\Duration.cs" />
+    <Compile Include="ParameterFactory\HasAstronautFactory.cs" />
+    <Compile Include="ParameterFactory\NoneFactory.cs" />
+    <Compile Include="ParameterFactory\AtMostFactory.cs" />
+    <Compile Include="ParameterFactory\AtLeastFactory.cs" />
+    <Compile Include="ParameterFactory\HasCrewCapacityFactory.cs" />
+    <Compile Include="ParameterFactory\PerformOrbitalSurveyFactory.cs" />
+    <Compile Include="ParameterFactory\VesselDestroyedFactory.cs" />
+    <Compile Include="ScenarioModules\BiomeTracker.cs" />
+    <Compile Include="Util\ResearchBodiesWrapper.cs" />
+    <Compile Include="Util\DebugWindow.cs" />
+    <Compile Include="Util\DraftTwitchViewers.cs" />
+    <Compile Include="Util\ExceptionLogWindow.cs" />
+    <Compile Include="Util\ExceptionUtil.cs" />
+    <Compile Include="Util\Extensions.cs" />
+    <Compile Include="ParameterFactory\RendezvousFactory.cs" />
+    <Compile Include="ParameterFactory\InvalidParameterFactory.cs" />
+    <Compile Include="ParameterFactory\VesselIsTypeFactory.cs" />
+    <Compile Include="ParameterFactory\VesselNotDestroyedFactory.cs" />
+    <Compile Include="ParameterFactory\TargetDestroyedFactory.cs" />
+    <Compile Include="ParameterFactory\DockingFactory.cs" />
+    <Compile Include="ParameterFactory\ReachStateFactory.cs" />
+    <Compile Include="ParameterFactory\OrbitFactory.cs" />
+    <Compile Include="Util\ContractsWindow.cs" />
+    <Compile Include="Util\LocationUtil.cs" />
+    <Compile Include="Util\LRUCache.cs" />
+    <Compile Include="MissionControlUI.cs" />
+    <Compile Include="Util\PartUtil.cs" />
+    <Compile Include="Util\SCANsatUtil.cs" />
+    <Compile Include="Util\Science.cs" />
+    <Compile Include="Util\TextureUtil.cs" />
+    <Compile Include="Util\TipLoader.cs" />
+    <Compile Include="Util\TitleTracker.cs" />
+    <Compile Include="ParameterFactory\PartValidationFactory.cs" />
+    <Compile Include="ParameterFactory\IsNotVesselFactory.cs" />
+    <Compile Include="ParameterFactory\HasPassengersFactory.cs" />
+    <Compile Include="ParameterFactory\DurationFactory.cs" />
+    <Compile Include="Util\DebuggingUtils.cs" />
+    <Compile Include="Util\Validation.cs" />
+    <Compile Include="Behaviour\Expression.cs" />
+    <Compile Include="Behaviour\OrbitGenerator.cs" />
+    <Compile Include="Behaviour\WaypointGenerator.cs" />
+    <Compile Include="Parameter\VesselParameter\VisitWaypoint.cs" />
+    <Compile Include="Parameter\AlwaysTrue.cs" />
+    <Compile Include="Parameter\VesselParameter\VesselMass.cs" />
+    <Compile Include="Requirement\ExpressionRequirement.cs" />
+    <Compile Include="Requirement\FacilityRequirement.cs" />
+    <Compile Include="Requirement\HasAstronautRequirement.cs" />
+    <Compile Include="Behaviour\SpawnKerbal.cs" />
+    <Compile Include="IContractConfiguratorFactory.cs" />
+    <Compile Include="Util\LoggingUtil.cs" />
+    <Compile Include="ParameterFactory\VisitWaypointFactory.cs" />
+    <Compile Include="ParameterFactory\ReachSpecificOrbitFactory.cs" />
+    <Compile Include="ParameterFactory\VesselMassFactory.cs" />
+    <Compile Include="ScenarioModules\PersistentDataStore.cs" />
+    <Compile Include="Parameter\Timer.cs" />
+    <Compile Include="Parameter\Sequence.cs" />
+    <Compile Include="Parameter\VesselParameter\HasResource.cs" />
+    <Compile Include="Parameter\VesselParameter\ReturnHome.cs" />
+    <Compile Include="Parameter\VesselParameter\HasCrew.cs" />
+    <Compile Include="Parameter\VesselParameter\VesselHasVisited.cs" />
+    <Compile Include="ContractBehaviour.cs" />
+    <Compile Include="Requirement\PartModuleUnlockedRequirement.cs" />
+    <Compile Include="Util\DurationUtil.cs" />
+    <Compile Include="Parameter\VesselParameter.cs" />
+    <Compile Include="Parameter\VesselParameterGroup.cs" />
+    <Compile Include="Parameter\All.cs" />
+    <Compile Include="Parameter\Any.cs" />
+    <Compile Include="ContractRequirement.cs" />
+    <Compile Include="Requirement\All.cs" />
+    <Compile Include="Requirement\CompleteContractRequirement.cs" />
+    <Compile Include="Requirement\Any.cs" />
+    <Compile Include="Requirement\TechResearchedRequirement.cs" />
+    <Compile Include="Requirement\SpacewalkRequirement.cs" />
+    <Compile Include="Requirement\RunwayLandingRequirement.cs" />
+    <Compile Include="Requirement\ReachSpaceRequirement.cs" />
+    <Compile Include="Requirement\KSCLandingRequirement.cs" />
+    <Compile Include="Requirement\FirstLaunchRequirement.cs" />
+    <Compile Include="Requirement\FirstCrewToSurviveRequirement.cs" />
+    <Compile Include="Requirement\AltitudeRecordRequirement.cs" />
+    <Compile Include="Requirement\ProgressCelestialBodyRequirement.cs" />
+    <Compile Include="Requirement\ProgressCelestialBodyRequirement\BaseConstructionRequirement.cs" />
+    <Compile Include="Requirement\ProgressCelestialBodyRequirement\SurfaceEVARequirement.cs" />
+    <Compile Include="Requirement\ProgressCelestialBodyRequirement\SplashDownRequirement.cs" />
+    <Compile Include="Requirement\ProgressCelestialBodyRequirement\ReturnFromSurfaceRequirement.cs" />
+    <Compile Include="Requirement\ProgressCelestialBodyRequirement\ReturnFromOrbitRequirement.cs" />
+    <Compile Include="Requirement\ProgressCelestialBodyRequirement\ReturnFromFlyByRequirement.cs" />
+    <Compile Include="Requirement\ProgressCelestialBodyRequirement\RendezvousRequirement.cs" />
+    <Compile Include="Requirement\ProgressCelestialBodyRequirement\OrbitRequirement.cs" />
+    <Compile Include="Requirement\ProgressCelestialBodyRequirement\LandingRequirement.cs" />
+    <Compile Include="Requirement\ProgressCelestialBodyRequirement\FlyByRequirement.cs" />
+    <Compile Include="Requirement\ProgressCelestialBodyRequirement\EscapeRequirement.cs" />
+    <Compile Include="Requirement\ProgressCelestialBodyRequirement\DockingRequirement.cs" />
+    <Compile Include="Requirement\PartUnlockedRequirement.cs" />
+    <Compile Include="BehaviourFactory.cs" />
+    <Compile Include="ParameterFactory\TimerFactory.cs" />
+    <Compile Include="ParameterFactory\SequenceFactory.cs" />
+    <Compile Include="ParameterFactory\HasResourceFactory.cs" />
+    <Compile Include="ParameterFactory\HasCrewFactory.cs" />
+    <Compile Include="ParameterFactory\ReturnHomeFactory.cs" />
+    <Compile Include="ParameterFactory\VesselParameterGroupFactory.cs" />
+    <Compile Include="ParameterFactory\AllFactory.cs" />
+    <Compile Include="ParameterFactory\AnyFactory.cs" />
+    <Compile Include="ParameterFactory\PartTestFactory.cs" />
+    <Compile Include="ParameterFactory\RecoverKerbalFactory.cs" />
+    <Compile Include="ParameterFactory\ReachSpaceFactory.cs" />
+    <Compile Include="ParameterFactory\PlantFlagFactory.cs" />
+    <Compile Include="ParameterFactory\KerbalDeathsFactory.cs" />
+    <Compile Include="ContractConfigurator.cs" />
+    <Compile Include="ContractType.cs" />
+    <Compile Include="ConfiguredContract.cs" />
+    <Compile Include="ParameterFactory.cs" />
+    <Compile Include="Util\ConfigNodeUtil.cs" />
+    <Compile Include="ParameterFactory\CollectScienceFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScenarioModules\ContractVesselTracker.cs" />
+    <Compile Include="Util\Version.cs" />
+    <Compile Include="Util\ContractDisabler.cs" />
+    <Compile Include="Util\WaypointUtil.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
